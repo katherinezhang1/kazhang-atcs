@@ -40,11 +40,13 @@ public class Array {
 		}
 	//adds number into the array + increases its size by 1
 	void insert (int index, int val){
-		//added comment
-	}
+
+		}
+	
 	void remove(){ 
 	} 
 	void update (int index, int val){
+		array[index]=val;
 	}
 	void swap(){
 	}
