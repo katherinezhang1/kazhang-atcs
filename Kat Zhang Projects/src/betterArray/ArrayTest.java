@@ -6,8 +6,13 @@ public class ArrayTest {
 
 	public static void main(String[] args) {
 		Array a = new Array(2);
-		System.out.println(a.getArray());
-		System.out.println(a.getValue(1));
+		a.insert(1, 1);
+		a.insert(0, 5);
+		System.out.println(a.toString());
+		a.remove(0);
+		System.out.print(a.toString());
+		
+	
 		
 }
 }
