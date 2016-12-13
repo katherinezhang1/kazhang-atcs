@@ -1,7 +1,5 @@
 package betterArray;
 
-import java.util.Arrays;
-
 //Katherine Zhang 
 //Array Remix 
 public class Array {
@@ -47,6 +45,17 @@ public class Array {
 		return lastValue;
 	}
 
+	// returns a string with every value in the array, e.g. “1, 2, 3, 4, 5”
+	public String toString() {
+		String string = "";
+		for (int i = 0; i < array.length; i++) 
+		{
+			string += array[i] + " ";
+		}
+		string += "";
+		return string;
+	}
+
 	// adds number into the array + increases its size by 1
 	void insert(int index, int val) {
 		int[] temp = new int[array.length + 1];
@@ -83,16 +92,9 @@ public class Array {
 		array[index] = val;
 	}
 
-	// returns a string with every value in the array, e.g. “1, 2, 3, 4, 5”
-	public String toString() {
-		String temp = Arrays.toString(array);
-		return temp;
-	}
-
-	// returns the entire array
-	String getArray() {
-		String temp = Arrays.toString(array);
-		return temp;
+	// returns array
+	 int [] getArray() {
+		return array;
 	}
 
 	// swaps the values in positions 'index1' and 'index2' in the array
@@ -104,19 +106,51 @@ public class Array {
 
 	// sorts the values in the array from least to greatest
 	void sort() {
-		Arrays.sort(array);
+		int n = array.length;
+		int temp = 0;
+		for (int i = 0; i < n; i++) {
+			for (int j = 1; j < (n - i); j++) {
+				if (array[j - 1] > array[j]) {
+					temp = array[j - 1];
+					array[j - 1] = array[j];
+					array[j] = temp;
+				}
+
+			}
+		}
 	}
 
 	// returns the minimum value in the array
 	int min() {
-		Arrays.sort(array);
+		int n = array.length;
+		int temp = 0;
+		for (int i = 0; i < n; i++) {
+			for (int j = 1; j < (n - i); j++) {
+				if (array[j - 1] > array[j]) {
+					temp = array[j - 1];
+					array[j - 1] = array[j];
+					array[j] = temp;
+				}
+			}
+		}
 		int x = array[0];
 		return x;
 	}
 
 	// returns the maximum value in the array
 	int max() {
-		Arrays.sort(array);
+		int n = array.length;
+		int temp = 0;
+		for (int i = 0; i < n; i++) {
+			for (int j = 1; j < (n - i); j++) {
+
+				if (array[j - 1] > array[j]) {
+					temp = array[j - 1];
+					array[j - 1] = array[j];
+					array[j] = temp;
+				}
+			}
+		}
 		int x = array[array.length - 1];
 		return x;
 	}
