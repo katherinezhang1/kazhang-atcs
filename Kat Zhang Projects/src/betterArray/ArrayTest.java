@@ -57,7 +57,7 @@ public class ArrayTest {
 		// Testing getArray()
 		// Relation to context: worker just wants to see the array
 		a.getArray();
-		System.out.println("Returned array: " + a);
+		System.out.println("Returned array: " + a.getArray());
 		// Testing update()
 		// Relation to context: worker forgot that he was also their attending
 		// the concert
