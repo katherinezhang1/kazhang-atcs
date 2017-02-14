@@ -15,12 +15,17 @@ public class fileArrayTest {
 		concertPopulation[5] = 9801; // Friday
 		concertPopulation[6] = 7649; // Saturday
 		
+		int[] test = new int [3];
+		test[0]=1;
+		test[1]=2;
+		test[2]=3;
+		
 		fileArray a = new fileArray(concertPopulation);
+		fileArray b = new fileArray(test);
 		String filename = "john"; 
-		a.writeFile("john.txt");
-		a.readFile("john.txt");
-		System.out.println(a.returnArray());
-		System.out.println(a.enterArray(concertPopulation));
+		b.writeFile("john.txt");
+		b.readFile("out.txt");
+		
+		System.out.println(b.toString());
 	}
-
 }

@@ -30,11 +30,10 @@ public class fileArray {
     	  try {
   			fr = new FileReader(fileName);
   			BufferedReader br = new BufferedReader(fr);
-  			
   			String input;
   			String[] dataString = null;
   			while ((input = br.readLine()) != null) {
-  				// System.out.println(input);
+  				System.out.println(input);
   				dataString = input.split("\n");
   			}
   			int[] data = new int[dataString.length];
@@ -45,15 +44,31 @@ public class fileArray {
   		} catch (Exception e) {
   		}
       }
-     int[] returnArray() {
-    			return array;
-    		}
-     String enterArray(int[]a){
-    	 String s = " ";
+    int[] returnArray() {
+    	return array;
+    	
+ 	}
+    public String toString() {
+		String string = "[";
+		// runs a loop through the array to place all values in the string
+		for (int i = 0; i < array.length; i++) {
+			string += array[i];// takes values and add a space between
+								// them
+			if (i != array.length - 1) {
+				string += ", " + "";
+			}
+		}
+		string += "]";
+		return string; // returns the array
+	}
+    		
+     void enterArray(int[]a){
+    	 array = a; 
+    	 /*String s = " ";
 			for (int i = 0; i < array.length; i++){
 				s += array[i]+ "\n";
 			}
-			return s;
+			return s;*/
 
   	}
 
