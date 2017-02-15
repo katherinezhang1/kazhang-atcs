@@ -1,4 +1,5 @@
 package itemArrayList;
+//Katherine Zhang 
 
 import java.util.ArrayList;
 import java.io.BufferedReader;
@@ -12,36 +13,22 @@ public class Item {
 	private double price;
 	private String name; 
 	//private int quantity; 
-	int[]array; 
-	Item(int[] n) {
-		array = n;
-	}
+	
 	Item(String n, double p){
 		name = n;
 		price = p; 
 
 	}
 		
-	String getName(){
+	public String getName(){
 		return name;
 	}
-	double getPrice(){
+	double getPrice(String n){
 		return price;
 	}
 	
-	double setPrice(String n, int x){
-		return price;
-	}
 
-	//ArrayList<String> a = new ArrayList<String>();
-//	int Search(){
-//		int temp;
-//		searchin = input;
-//		temp = indexOf(searchin);
-//		outprice = get(temp);
-//		
-//		
-//		return outprice; 
-//}
+
+
 	
 }
