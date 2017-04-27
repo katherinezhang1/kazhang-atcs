@@ -39,5 +39,8 @@ public class Food {
 		quantity = n;
 		return quantity;
 	}
+	public String toString(){
+		return name+ ", $"+ price;
+}
 }
 	

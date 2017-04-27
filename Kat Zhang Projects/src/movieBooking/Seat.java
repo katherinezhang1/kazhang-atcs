@@ -1,12 +1,16 @@
 package movieBooking;
 
 public class Seat {
-	private String name;
-	
-	Seat(String n){
-		name = n;
+	private String seatName; 
+	Seat(String n) {
+		seatName=n;
 	}
-	String getSeat(){
-		return name;
+		String getSeat(){
+			return seatName;
+		}
+		public String toString(){
+			return seatName;
+	
+		
 	}
 }

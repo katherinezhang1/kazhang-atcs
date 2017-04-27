@@ -1,17 +1,17 @@
 package movieBooking;
 
+import javax.swing.ListModel;
+
 public class Movie {
 	private String movieName; 
 	private int movieLength;
-	private String movieSummary;
 	private String movieRating;
 	
-	Movie(String n, int l,String s, String r) {
+	Movie(String n, int l, String r) {
 		movieName=n;
 		movieLength=l;
-		movieSummary=s;
 		movieRating=r;
-	
+	 
 	}
 	/**
 	 Method that returns the name of a movie
@@ -27,13 +27,7 @@ public class Movie {
 	int getLength(){
 		return movieLength;
 	}
-	/**
-	 * Method that returns the summary of a movie
-	 * @return returns the summary of a movie
-	 */
-	String movieSummary(){
-		return movieSummary;
-	}
+	
 	/**
 	 * Method that returns the rating of a movie
 	 * @return the rating of a movie
@@ -46,6 +40,8 @@ public class Movie {
 	 * @return movieName + movieLength + movieSummary + movieRating
 	 */
 	public String toString(){
-		return movieName + movieLength + movieSummary + movieRating;
+		return movieName +", " +  movieLength + " minutes, "  +"Rated: " + movieRating;
 	}
-}
+
+	}
+
